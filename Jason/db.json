@@ -1,0 +1,32 @@
+{
+    "IMGS": [
+    {
+    "img":"../Imgs/criancas.avif"
+    },
+    {
+    "img":"../Imgs/criancasComCelular.jpg"
+    },
+    {
+    "img":"../Imgs/criancasConversando.jpg"
+    },
+    {
+    "img":"../Imgs/meninaEscrevendo.avif"
+    },
+    {
+    "img":"../Imgs/mininoEscrevendo.jpg"
+    },
+    {
+    "img":"../Imgs/Icones/Email.png"
+    },
+    {
+    "img":"../Imgs/Icones/Logo.png"
+    },
+    {
+    "img":"../Imgs/Icones/Telefone.png"
+    }
+    ,
+    {
+    "img":"../Imgs/Icones/Whatsapp.png"
+    }
+    ]
+}

@@ -1,0 +1,42 @@
+.section1{
+    background: url(../Imgs/meninaEscrevendo.avif);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    border-radius: 0px 0px 20vh 0px;
+    margin-top: 90px;
+}
+.section3{
+  background: url(../Imgs/criancas.avif);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 15vh 0px 15vh;
+}
+.section5{
+  background: url(../Imgs/criancasConversando.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15vh 0px 15vh 0px;
+}
+.section7{
+  background: url(../Imgs/criancasComCelular.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15vh 0px 15vh 0px;
+}
+
+.section-text h1{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.section-text div{
+    max-width: 700px;
+}
+.section6 .button{
+  margin: 10px;
+}
