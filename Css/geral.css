@@ -58,7 +58,8 @@ html{
       text-decoration: none;
   }
   .button:hover{
-    padding: 3px 13px 3px 13px;
+    border: 2px solid black;
+    color: black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   @keyframes flutua {

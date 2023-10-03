@@ -4,11 +4,11 @@
 }
 .section1{
     flex-direction: column;
-    background: url(../Imgs/criancasComCelular.jpg);
+    background: url(../Imgs/criancaConta.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 125vh;
     border-radius: 0px 0px 20vh 0px;
     margin-top: 90px;
 }
@@ -93,11 +93,7 @@ a, a:hover{
     height: 150px;
 }
 
-
-
-
 .containeer {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -108,43 +104,42 @@ a, a:hover{
     border: 2px solid white;
     border-radius: 25px;
     max-width: 600px;
-    margin: 40px;
+    margin: 20px;
     background-color: transparent;
     backdrop-filter: blur(10px);
     animation: flutua 5s ease-in-out infinite;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-}
-h1{
     color: white;
 }
-
 .form-group {
     margin-bottom: 15px;
 }
-
 .form-group input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 10px;
     font-size: 16px;
 }
-
 .form-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 10px;
     font-size: 16px;
 }
+form{
+    width: 500px;
+}
+.button{
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
 
-.btn {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    font-size: 18px;
-    cursor: pointer;
+@media screen and (-width: 600px){
+    form{
+        max-width: 300px;
+    }
 }
