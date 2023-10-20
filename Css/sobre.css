@@ -21,7 +21,7 @@
 }
 
 .section-text h1{
-    text-align: center;
+    text-align:center;
     font-size: 36px;
     margin-bottom: 10px;
     width: 100%;
@@ -29,8 +29,6 @@
 .section-text div{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     width: 1060px;
 }
 .section-text p{

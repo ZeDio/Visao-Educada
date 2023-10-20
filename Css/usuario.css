@@ -136,6 +136,8 @@ form{
     padding: 10px;
     margin: 0px;
     margin-bottom: 10px;
+    background-color: white;
+    color: black;
 }
 
 @media screen and (max-width: 600px){
