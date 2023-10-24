@@ -1,0 +1,17 @@
+git branch teste
+
+git branch
+
+git checkout teste
+
+git add .
+
+git commit -m "sla"
+
+git push origin teste
+
+git checkout main
+
+git merge teste
+
+git push origin main
