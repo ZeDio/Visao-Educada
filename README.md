@@ -1,2 +1,2 @@
-# exemplo2mia
-Ver pagina web ---> https://zedio.github.io/exemplo2mia/
+# Visão Educada
+Ver pagina web ---> https://zedio.github.io/Visao-Educada/
