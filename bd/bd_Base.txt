@@ -1,0 +1,15 @@
+use VisaoEducada
+db.createCollection(“usuario”)
+
+ex. de inserção de dados de um usuario..
+db..insertOne({
+	email: "exemplo@gmail.com",
+	senha: "123456",
+	nome: " José Diogo",
+	endereco: " R. exemplo",
+	bairro: "Exemplo",
+	complemento: "ap.1234",
+ 	numero: "1234",
+	cep: "12345-678",
+	uf: "ex."
+})
