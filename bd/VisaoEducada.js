@@ -43,4 +43,4 @@ const jose = new usuario({
 	uf: SP  
 });
 
-marcos.save()
+jose.save()
