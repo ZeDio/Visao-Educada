@@ -1,27 +1,19 @@
 {
-  "name": "mongo",
+  "name": "revac2mia",
   "version": "1.0.0",
-  "description": "Primeito uso do mongose",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js localhost 8000"
+    "start": "nodemon ./VisaoEducada.js localhost:3000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZeDio/INW2MIA.git"
-  },
-  "author": "José Diogo",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZeDio/INW2MIA/issues"
-  },
-  "homepage": "https://github.com/ZeDio/INW2MIA#readme",
   "dependencies": {
-    "csv-parser": "^3.0.0",
-    "fs": "^0.0.1-security",
-    "mongoose": "^7.5.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3",
     "nodemon": "^3.0.1"
-  },
-  "keywords": []
+  }
 }

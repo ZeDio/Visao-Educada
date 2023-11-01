@@ -1,46 +1,108 @@
 // mongodb://localhost:27017/  ou  mongodb://127.0.0.1:27017/
 // npm init -y
-// npm i mongoose
+// npm i -y
+//net start mongodb
+//npm start
 
-const mongoose  = require('mongoose');
+//instalando programas
+const mongoose = require("mongoose");
+const express = require("express");
+const bodyParser = require("body-parser");
 
+//configurando o roteamento para teste no postman
+const app = express();
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+const port = 3000;
+
+//configurando o acesso ao mongodb
 mongoose.connect('mongodb://127.0.0.1:27017/VisaoEducada',
- {useNewUrlParser : true,
-  useUnifiedTopology: true,
-  serverSelectionTimeoutMS : 20000});
+{   useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS : 20000
+});
 
-const db = mongoose.connection;
+//criando a model do seu projeto
+const CadastroSchema = new mongoose.Schema({
+	email : {type : String, required : true},
+	senha : {type : Number, required : true},
+    nome : {type : String},
+    endereco : { type : String},
+	bairro : { type : String},
+	complemento : { type : String},
+    numero : {type : Number},
+    cep : {type : String, required : true},
+    uf : {type : String, required : true}
+});
 
-db.on('error', console.error.bind(console, 'connection error : '))
+const Pessoa = mongoose.model("Cadastro", CadastroSchema);
 
-db.once('open', function(){
-    console.log("Estamos conectados ao banco");
+
+//configurando os roteamentos
+app.post("/cadastro.html", async(req, res)=>{
+	const email = req.body.email;
+	const senha = req.body.senha;
+    const nome = req.body.nome;
+    const endereco = req.body.endereco;
+	const bairro = req.body.bairro;
+    const complemento = req.body.complemento;
+	const numero = req.body.numero;
+    const cep  = req.body.cep;
+    const uf = req.body.uf
+
+    //testando se todos os campos foram prenchidos
+    if(email == null || senha == null || nome == null || endereco == null || bairro == null || complemento == null || numero == null || cep == null || uf == null){
+        return res.status(400).json({error: "Preencha todos os dados.."})
+    }
+
+    //teste mais importante da ac..
+    const emailExistente = await Cadastro.findOne({email:email})
+    if(emailExistente){
+        return res.status(400).json({error : "O e-mail cadastrado já existe!!"})
+    }
+
+    //mandando para 
+    const cadastrado = new Cadastro({
+        email : email,
+		senha : senha,
+		nome : nome,
+		endereco : endereco,
+		bairro : bairro,
+		complemento : complemento,
+		numero : numero,
+		cep : cep,
+		uf : uf
+    })
+
+    try{
+        const newCadastro = await cadastro.save();
+        res.json({error : null, msg : "Cadastro ok", cadastradoId : newCadastro._id});
+    } catch(error){
+        res.status(400).json({error});
+    }
+});
+
+//rota para o get de cadastro
+app.get("/cadastro", async(req, res)=>{
+    res.sendFile(__dirname +"/../Pgs/cadastro.html");
 })
 
-const usuarioSchema = new mongoose.Schema({
-	email: String,
-	senha: String,
-	nome: String,
-	endereco: String,
-	bairro: String,
-	complemento: String,
- 	numero: Number,
-	cep: String,
-	uf: String
-});
+//rota para o get de login
+app.get("/login", async(req, res)=>{
+    res.sendFile(__dirname +"/../Pgs/login.html");
+})
 
-const usuario = mongoose.model('usuario',pessoaSchema)
+//rota para o get de login
+app.get("/sobre", async(req, res)=>{
+    res.sendFile(__dirname +"/../Pgs/sobre.html");
+})
 
-const jose = new usuario({
-    email: "jose.diogo100407@gmail.com",
-	senha: "123456",
-	nome: "José Diogo",
-	endereco: "R. Helena Zerrener",
-	bairro: "Liberdade",
-	complemento: "Ap.1214",
- 	numero: "39",
-	cep: "02012-020",
-	uf: SP  
-});
+//rota raiz - inw
+app.get("/index", async(req, res)=>{
+    res.sendFile(__dirname +"/../index.html");
+})
 
-jose.save()
+//configurando a porta
+app.listen(port, ()=>{
+    console.log(`Servidor rodando na porta ${port}`);
+})
