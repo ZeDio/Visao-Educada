@@ -12,6 +12,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 10px;
+        margin-bottom: 10px;
       }
       .section2, .section4, .section6{
           flex-direction: row;
@@ -26,6 +28,14 @@
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 0px 15vh 0px 15vh;
+      }
+      .section5{
+        background: url(https://github.com/ZeDio/Visao-Educada/blob/teste/Imgs/Equipe.jpg?raw=true);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15vh 0vh 15vh 0vh;
+        margin-bottom: 30px;
       }
 
       .section-text h1{
