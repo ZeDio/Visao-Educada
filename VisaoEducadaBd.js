@@ -19,7 +19,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/VisaoEducada',
 //cadastro do usuario
 const CadastroSchema = new mongoose.Schema({
 	email : {type : String, required : true},
-	senha : {type : Number, required : true},
+	senha : {type : String, required : true},
     nome : {type : String},
     endereco : { type : String},
 	bairro : { type : String},
@@ -67,7 +67,7 @@ app.post("/cadastro", async(req, res)=>{
     })
 
     try{
-        const newCadastro = await Cadastro.save();
+        const newCadastro = await Cadastrado.save();
         res.json({error : null, msg : "Cadastro ok", cadastradoId : newCadastro._id});
     } catch(error){
         res.status(400).json({error});
