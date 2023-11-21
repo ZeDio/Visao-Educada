@@ -5,7 +5,7 @@
 }
 .section1{
     flex-direction: column;
-    background: url(../Imgs/criancaConta.jpg);
+    background: url(https://github.com/ZeDio/Visao-Educada/blob/main/Imgs/criancaConta.jpg?raw=true);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,7 +154,7 @@ form{
 }
 .section1{
     flex-direction: column;
-    background: url(../Imgs/criancaConta.jpg);
+    background: url(https://github.com/ZeDio/Visao-Educada/blob/main/Imgs/criancaConta.jpg?raw=true);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -256,7 +256,7 @@ a, a:hover{
     max-width: 600px;
     margin: 20px;
     background-color: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
     animation: flutua 5s ease-in-out infinite;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: white;
